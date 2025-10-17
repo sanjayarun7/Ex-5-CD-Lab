@@ -13,58 +13,8 @@ To write a YACC program to recognize the grammar anb where n>=10.
 7.	Compile these with the C compiler as gcc lex.yy.c y.tab.c
 8.	Enter a string as input and it is identified as valid or invalid.
 # PROGRAM:
-LEX FILE:
-```
-%{
-#include "y.tab.h"
-%}
 
-%%
-a   { return A; }
-b   { return B; }
-\n  { return '\n'; }
-.   { return yytext[0]; }
-%%
 
-int yywrap() {
-    return 1;
-}
-```
-
-Ex-5-CD-Lab
-/README.md
-DHANUSRIPOOJA
-DHANUSRIPOOJA
-Update README.md
-c25297a
- · 
-2 weeks ago
-Ex-5-CD-Lab
-/README.md
-
-Preview
-
-Code
-
-Blame
-74 lines (66 loc) · 1.79 KB
-Ex-5-RECOGNITION-OF-THE-GRAMMAR-anb-where-n-10-USING-YACC
-RECOGNITION OF THE GRAMMAR(anb where n>=10) USING YACC
-
-Date:06.10.2025
-Aim:
-To write a YACC program to recognize the grammar anb where n>=10.
-
-ALGORITHM
-Start the program.
-Write a program in the vi editor and save it with .l extension.
-In the lex program, write the translation rules for the variables a and b.
-Write a program in the vi editor and save it with .y extension.
-Compile the lex program with lex compiler to produce output file as lex.yy.c. eg $ lex filename.l
-Compile the yacc program with yacc compiler to produce output file as y.tab.c. eg $ yacc –d arith_id.y
-Compile these with the C compiler as gcc lex.yy.c y.tab.c
-Enter a string as input and it is identified as valid or invalid.
-PROGRAM:
 LEX FILE:
 ```
 %{
